@@ -3,7 +3,7 @@ import 'package:my_wallet_app_ui/config/colors.dart';
 import 'package:my_wallet_app_ui/config/size.dart';
 import 'package:my_wallet_app_ui/config/strings.dart';
 import 'package:my_wallet_app_ui/piechart/piechartcustompainter.dart';
-
+import 'package:intl/intl.dart';
 
 class PieChart extends StatefulWidget {
   @override
@@ -12,17 +12,16 @@ class PieChart extends StatefulWidget {
 
 class _PieChartState extends State<PieChart>
     with SingleTickerProviderStateMixin {
+  var f = new NumberFormat("###,###,##0.00", "pt_BR");
   double total = 0;
   @override
   void initState() {
-
     super.initState();
     category.forEach((e) => total += e['amount']);
   }
 
   @override
   Widget build(BuildContext context) {
-
     var width = SizeConfig.getWidth(context);
     double fontSize(double size) {
       return size * width / 414;
@@ -43,9 +42,9 @@ class _PieChartState extends State<PieChart>
                   child: CustomPaint(
                     child: Container(),
                     foregroundPainter: PieChartCustomPainter(
-                        width: constraint.maxWidth * 0.5,
-                        categories: category,
-                       ),
+                      width: constraint.maxWidth * 0.5,
+                      categories: category,
+                    ),
                   ),
                 ),
               ),
@@ -64,9 +63,9 @@ class _PieChartState extends State<PieChart>
                       ]),
                   child: Center(
                       child: Text(
-                    "\$" + total.toString(),
+                    "R\$ " + f.format(total),
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: fontSize(22)),
+                        fontWeight: FontWeight.bold, fontSize: fontSize(15)),
                   )),
                 ),
               )

@@ -1,8 +1,7 @@
 List category = [
-  {"name": "Groceries", "amount": 500.0},
-  {"name": "Online Shopping", "amount": 100.0},
-  {"name": "Eating Out", "amount": 80.0},
-  {"name": "Bills", "amount": 50.0},
-  {"name": "Subscriptions", "amount": 100.0},
-  {"name": "Fees", "amount": 30.0},
+  {"name": "Ferilizantes", "amount": 2458.0},
+  {"name": "Defensivos", "amount": 2750.0},
+  {"name": "Embalagens", "amount": 800.0},
+  {"name": "Sementes", "amount": 1250.0},
+  {"name": "Outros", "amount": 270.0},
 ];

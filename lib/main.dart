@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bank Expenses',
+      title: 'Gráficos da Safra',
       home: DashboardPage(),
       theme: ThemeData(fontFamily: "Circular"),
       debugShowCheckedModeBanner: false,

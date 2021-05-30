@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget {
         children: <Widget>[
           Container(
               child: Text(
-            "Michael's Account",
+            "Fazenda Rio Claro",
             style:
                 TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
           )),
@@ -49,7 +49,7 @@ class CustomAppBar extends StatelessWidget {
                   ),
                 ),
                 Center(
-                  child: Icon(Icons.notifications),
+                  child: Icon(Icons.home),
                 )
               ],
             ),

@@ -25,7 +25,7 @@ class _CardWidgetState extends State<CardWidget> {
             margin: EdgeInsets.symmetric(horizontal: width / 20),
             alignment: Alignment.centerLeft,
             child: Text(
-              "Card Selected",
+              "Safra selecionada",
               style: TextStyle(
                   fontWeight: FontWeight.bold, fontSize: fontSize(20)),
             )),
@@ -52,7 +52,7 @@ class _CardWidgetState extends State<CardWidget> {
                           child: Container(
                             decoration: BoxDecoration(boxShadow: [
                               BoxShadow(
-                                  color: Colors.blue[900].withOpacity(0.2),
+                                  color: Colors.blue[900].withOpacity(0.6),
                                   blurRadius: 50,
                                   spreadRadius: 2,
                                   offset: Offset(20, 0)),
@@ -71,7 +71,7 @@ class _CardWidgetState extends State<CardWidget> {
                           child: Container(
                             decoration: BoxDecoration(boxShadow: [
                               BoxShadow(
-                                  color: Colors.blue[900].withOpacity(0.2),
+                                  color: Colors.blue[900].withOpacity(0.9),
                                   blurRadius: 50,
                                   spreadRadius: 2,
                                   offset: Offset(20, 0)),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_wallet_app_ui/config/colors.dart';
 import 'package:my_wallet_app_ui/config/size.dart';
 
-
 class BankCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,16 +20,22 @@ class BankCard extends StatelessWidget {
             alignment: Alignment.topLeft,
             child: Container(
                 alignment: Alignment.topLeft,
-                width: width / 1.8,
-                child: Image.asset(
-                  "assets/mastercardlogo.png",
-                  fit: BoxFit.fill,
+                height: 100,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
+                  child: Image.network(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3YO1yPlwp6X3Syv-Qwz4gwAELM-4vRgT4dg&usqp=CAU",
+                    fit: BoxFit.fill,
+                  ),
                 )),
           ),
           Align(
               alignment: Alignment.bottomLeft,
               child: Container(
-                height: height / 10,
+                height: height / 18,
                 width: width / 1.9,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -39,37 +44,34 @@ class BankCard extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         Text(
-                          "**** **** **** ",
+                          "Pimentão Vermelho",
                           style: TextStyle(
-                              fontSize: fontSize(20),
-                              fontWeight: FontWeight.w500),
-                        ),
-                        Text(
-                          "1930",
-                          style: TextStyle(
-                              fontSize: fontSize(30),
+                              fontSize: fontSize(15),
+                              color: Colors.white,
                               fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
                     Text(
-                      "Platinum Card".toUpperCase(),
+                      "Talhão: Rio Claro 014".toUpperCase(),
                       style: TextStyle(
-                          fontSize: fontSize(15), fontWeight: FontWeight.bold),
+                          fontSize: fontSize(14), fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
               )),
           Align(
             alignment: Alignment.bottomRight,
-            child: Container(
-              alignment: Alignment.bottomRight,
-              width: width / 6,
-              height: height / 16,
-              decoration: BoxDecoration(
-                  color: AppColors.primaryWhite,
-                  boxShadow: AppColors.neumorpShadow,
-                  borderRadius: BorderRadius.circular(20)),
+            child: Padding(
+              padding: const EdgeInsets.only(right: 40),
+              child: Text(
+                '2.4 hA',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: fontSize(30),
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
             ),
           ),
         ],

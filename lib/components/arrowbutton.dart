@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_wallet_app_ui/config/colors.dart';
 import 'package:my_wallet_app_ui/config/size.dart';
 
-
 class ArrowButton extends StatelessWidget {
   final EdgeInsets margin;
   final Widget icon;
